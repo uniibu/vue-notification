@@ -15,8 +15,8 @@ const Notify = {
         events.$emit('add', params)
       }
     }
-    const name = `$${options.name || 'notify'}`
-    Vue.prototype[name] = notify
+    const name = options.name || 'notify'
+    Vue[name] = Vue.prototype[`$${name}`] = notify
   }
 }
 

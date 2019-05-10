@@ -1,7 +1,7 @@
 {
   "name": "@bitsler/vue-notification",
   "description": "Vue.js Notification Library",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "author": "Uni Sayo<unibtc@gmail.com>",
   "private": false,
   "publishConfig": {
