@@ -1,16 +1,10 @@
 import Notifications from './Notifications.vue'
-import { events }    from './events'
+import { events } from './events'
 
 const Notify = {
-  install(Vue, args = {}) {
-    if (this.installed) {
-      return
-    }
-
-    this.installed = true
-    this.params = args
-
-    Vue.component(args.componentName || 'notifications', Notifications)
+  install(Vue, options = {}) {
+    this.params = options;
+    Vue.component(options.componentName || 'notifications', Notifications)
 
     const notify = (params) => {
       if (typeof params === 'string') {
@@ -21,11 +15,8 @@ const Notify = {
         events.$emit('add', params)
       }
     }
-
-    const name = args.name || 'notify'
-
-    Vue.prototype['$' + name] = notify
-    Vue[name] = notify
+    const name = `$${options.name || 'notify'}`
+    Vue.prototype[name] = notify
   }
 }
 
