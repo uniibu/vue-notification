@@ -20,10 +20,10 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/euvl/vue-notification.git"
+    "url": "https://github.com/bitslercasino/vue-notification.git"
   },
   "bugs": {
-    "url": "https://github.com/euvl/vue-notification/issues"
+    "url": "https://github.com/bitslercasino/vue-notification/issues"
   },
   "license": "MIT",
   "peerDependencies": {
